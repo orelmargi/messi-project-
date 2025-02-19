@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    font-family: arial, sans-serif;
+    background: #75aadb;;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    padding: 15px;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+.navbar span {
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+h1 {
+    text-align: center; /* ממרכז את הטקסט אופקית */
+    font-family: arial, sans-serif;
+    font-size: 3rem; /* גודל הפונט */
+    font-weight: bold; /* הופך את הטקסט לשמן */
+    color: black; /* צבע כחול (ניתן לשנות) */
+    text-transform: uppercase; /* ממיר לאותיות גדולות */
+    letter-spacing: 6px; /* ריווח בין האותיות */
+    margin-bottom: 20px; /* מרווח מתחת לכותרת */
+    padding: 10px; /* ריווח פנימי */
+    border-bottom: 4px solid black; /* קו תחתון */
+    display: inline-block; /* מתאים את הקו לאורך הטקסט */
+}
+
+
+#images .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 עמודות רספונסיביות */
+    gap: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* סגנון לפריטי הגלריה */
+.gallery-item img {
+    width: 100%;  /* התמונות ימלאו את כל רוחב הפריט */
+    height: 200px; /* גובה אחיד לכל התמונות */
+    object-fit: cover; /* כדי שהתמונה תתמלא בצורה נכונה */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* התאמות לנייד */
+@media (max-width: 600px) {
+    #images h1 {
+        font-size: 1.8rem;
+    }
+
+    #images .gallery {
+        padding: 10px;
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 עמודות במסכים קטנים */
+    }
+}

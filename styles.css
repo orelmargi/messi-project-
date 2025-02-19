@@ -1,41 +1,98 @@
-.index.html
+/*.index.html*/ 
 /* Navbar */
-.navbar {
-    background-color: black; /* רקע */
-    padding: 10px;
-    border: 2px solid red; /* גבול */
-    display: flex;
-    justify-content: center; /* ממרכז את ה-navbar */
-    align-items: center;
-    width: 100%; /* מבטיח שהתפריט תופס את כל רוחב הדף */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
+.navbar {
+    font-family: arial, sans-serif;
+    background: #75aadb;;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
-    list-style: none; /* מסיר נקודות מהרשימה */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* מציב את הפריטים בשורה */
-    gap: 20px; /* יוצר רווחים בין הפריטים */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar ul li {
-    color: blue; /* צבע הטקסט */
+.navbar li {
+    display: inline;
+    padding: 15px;
+    margin: 0 20px;
 }
 
-.navbar ul li a {
-    text-decoration: none; /* מסיר קו תחתון */
-    color: white; /* צבע הקישורים */
+.navbar a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
     font-size: 18px;
-    padding: 8px 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
-    background-color: #444; /* צבע רקע כשעוברים עם העכבר */
-    color: #f4f4f4; /* צבע הטקסט כשעוברים עם העכבר */
+.navbar a:hover {
+    color: #ffcc00;
 }
 
+.navbar span {
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #00416a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #799f0c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #00416a;
+}
 /* כותרת ראשית */
 h1 {
     font-family: Arial, sans-serif;
@@ -56,12 +113,17 @@ h2 {
     color: rgba(0, 0, 0, 0.877);
     text-align: center;
 }
+h3 {
+text-align: center;
+font-family: arial, sans-serif;
+font-size: 30px;
 
+}
 /* פסקאות */
 p {
     font-family: Arial, sans-serif;
-    font-size: 38px;
-    text-align: center;
+    font-size: 22px;
+    text-align: left;
     padding: 15px;
     color: #333;
     line-height: 1.8; 
@@ -71,13 +133,35 @@ p {
 img {
     display: inline-block;
     margin: 20px;
-    max-width: 35%;
-    height: auto;
+    width: 20px; /* הגדרת רוחב התמונה */
+    height: auto; /* שמירה על פרופורציות התמונה */
     border-radius: 10px;
+    object-fit: cover; /* שמירה על איכות התמונה במידה ויש שינויים בגודל */
+}
+.image-text-container {
+    display: flex;
+    align-items: center; /* מיישר את התמונה והכיתוב באופן אנכי */
+    gap: 20px; /* מרווח בין התמונה לכיתוב */
+}
+
+.image-text-container img {
+    width: 50%; /* קובע את רוחב התמונה */
+    height: auto; /* שמירה על פרופורציות התמונה */
+    border-radius: 10px;
+}
+
+.text p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    margin: 0; /* מסיר רווחים מעל ומתחת לפסקה */
 }
 
 /* רשימות */
 ul, ol {
+    list-style-position: inside; /* מעביר את התבליטים לתוך הרשימה */
+    text-align: center; /* ממרכז את הטקסט */
+    padding: 0; /* מסיר רווחים */
     font-size: 20px;
     margin: 20px;
     padding-block: 40px;
@@ -91,6 +175,8 @@ ul li, ol li {
     border-radius: 8px;
     display: flex;
     align-items: center;
+    justify-content: center; /* ממרכז את הפריטים בשורה */
+    text-align: center; /* ממרכז את הטקסט עצמו */
     gap: 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -100,300 +186,19 @@ ul li:hover, ol li:hover {
     transform: scale(1.05);
 }
 
-/* אזור צדדי */
-aside {
-    background: rgba(0, 0, 0, 0.8); /* רקע כהה עם שקיפות */
-    color: white;
-    padding: 20px;
-    margin: 40px auto;
-    max-width: 800px; /* מגביל את הרוחב למראה מסודר */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* הצללה קלה */
-    text-align: center;
-}
-
 /* פוטר */
 footer {
-    background: #1d3557;
     padding: 20px;
     color: white;
     text-align: center;
     margin-top: 20px;
-    background-image: url(./assets/images/footer\ background.jpg);
+    background: url('./assets/images/footer\ background.jpg');
     background-size: cover;
     background-position: center;
 }
 
-
-#career {
-
-    padding: 30px;
-    margin: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    p {
-        font-size: 1.8em;
-        line-height: 1.6;
-        margin: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        background-color: #000;
-        color: white;
-    }
-
-}
-
-    #images {
-
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-    
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 עמודות רספונסיביות */
-            gap: 10px;
-            padding: 20px;
-            max-width: 900px;
-            height: auto;
-            margin: 0 auto;
-        }
-    }
-    
-    .gallery-item img {
-        width: 90%;
-        height: auto; /* תן לתמונה להימתח בצורה טבעית */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .gallery-item img:hover {
-        transform: scale(1.2);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* סיימתי את הסוגריים */
-    }
-    
-/* התאמות לנייד */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .gallery {
-        padding: 10px;
-    }
-}
-
-/* עיצוב כללי של עמוד הלוגין */
-.login-page {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, blue 50%, red 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* עיצוב קופסת הטופס */
-.login-page .login-container {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-/* עיצוב כותרת */
-.login-page h2 {
-margin-bottom: 20px;
-color: #333;
-}
-
-/* עיצוב שדות הטופס */
-.login-page input[type="text"],
-.login-page input[type="radio"] {
-    width: calc(100% - 20px);
+footer a{
+    color:#fff;
+    background-color: rgba(0,0,0,0.5);
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* עיצוב הרדיו */
-.login-page .gender-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-/* עיצוב הכפתור */
-.login-page input[type="submit"] {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* שינוי צבע הכפתור כאשר מרחפים עליו */
-.login-page input[type="submit"]:hover {
-    background: #0056b3;
-}
-
-/* עיצוב הלייבלים */
-.login-page label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-}
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .store-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        justify-items: center;
-        justify-content: center;
-    }
-    
-    .product {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 300px;
-    }
-    
-    .product h2 {
-        margin-bottom: 10px;
-        font-size: 1.2em;
-    }
-    
-    .product img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-
-      /* עמוד החידון */
-
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f4f4f4;
-        padding: 20px;
-    }
-    
-    h1 {
-        color: #003366;
-    }
-    
-    form {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        display: inline-block;
-        text-align: left;
-    }
-    
-    fieldset {
-        border: none;
-        margin-bottom: 15px;
-    }
-    
-    legend {
-        font-weight: bold;
-        color: #003366;
-    }
-    
-    input[type="submit"] {
-        background-color: #FFD700;
-        color: black;
-        border: none;
-        padding: 10px 15px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    input[type="submit"]:hover {
-        background-color: #FFC107;
-    }
-
-#about
-
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('https://wallpapercave.com/wp/wp7281130.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.team-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.team-member {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    flex: 1;
-    max-width: 250px;
-    height: 300px; /* גובה אחיד */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.team-member img {
-    max-width: 100%;
-    width: 80%;
-    height: 100%; /* שהתמונה תתפרס על רוב הקובייה */
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-h1, h3 {
-    color: #FFD700;
-}
-
-p {
-    font-size: 18px;
 }
