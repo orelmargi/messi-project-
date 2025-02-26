@@ -39,7 +39,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #ffcc00;
+    color: white;
 }
 
 .navbar span {
@@ -47,6 +47,20 @@ body {
     font-size: 18px;
     padding: 0 10px;
 }
+.navbar .logo img {
+    height: 60px; /* הגדרת גובה הלוגו */
+    transition: transform 0.3s ease; /* מעבר חלק בעת שינוי */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* הגדלת הלוגו כשמעבירים עליו את העכבר */
+}
+
+/* עיצוב הלינק ללוגו */
+.navbar .logo a {
+    text-decoration: none; /* הסרת קו תחתון */
+}
+
 
 .contact-container {
     max-width: 600px;
@@ -90,9 +104,6 @@ button {
     margin-top: 15px;
 }
 
-button:hover {
-    background: #00416a;
-}
 /* כותרת ראשית */
 h1 {
     font-family: Arial, sans-serif;
@@ -106,19 +117,63 @@ h1 {
     margin: 40px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-/* כותרת משנה */
-h2 {
-    font-size: 28px;
-    color: rgba(0, 0, 0, 0.877);
+.best-sellers {
     text-align: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+    border-radius: 12px;
 }
-h3 {
-text-align: center;
-font-family: arial, sans-serif;
-font-size: 30px;
+
+.best-sellers h2 {
+    font-family: arial sans-serif;
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+.best-sellers p {
+    text-align: center;
+    color: black;
+}
+
+.best-sellers-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.best-sellers .product {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.best-sellers .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 
 }
+
+.best-sellers .product img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        border-radius: 10px;
+        aspect-ratio: 4/3; /* ישמור על יחס רוחב-גובה אחיד */
+        object-fit: contain; /* ימנע חיתוך בעייתי */
+    }
+    
+.best-sellers .price {
+    font-size: 1.2em;
+    color: #27ae60;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 /* פסקאות */
 p {
     font-family: Arial, sans-serif;
@@ -133,9 +188,7 @@ p {
 img {
     display: inline-block;
     margin: 20px;
-    width: 20px; /* הגדרת רוחב התמונה */
     height: auto; /* שמירה על פרופורציות התמונה */
-    border-radius: 10px;
     object-fit: cover; /* שמירה על איכות התמונה במידה ויש שינויים בגודל */
 }
 .image-text-container {
@@ -145,7 +198,7 @@ img {
 }
 
 .image-text-container img {
-    width: 50%; /* קובע את רוחב התמונה */
+    width: 40%; /* קובע את רוחב התמונה */
     height: auto; /* שמירה על פרופורציות התמונה */
     border-radius: 10px;
 }
@@ -158,7 +211,7 @@ img {
 }
 
 /* רשימות */
-ul, ol {
+ ol {
     list-style-position: inside; /* מעביר את התבליטים לתוך הרשימה */
     text-align: center; /* ממרכז את הטקסט */
     padding: 0; /* מסיר רווחים */
@@ -167,7 +220,7 @@ ul, ol {
     padding-block: 40px;
 }
 
-ul li, ol li {
+ ol li {
     background-color: #f4f4f4;
     color: black;
     padding: 10px;
@@ -181,7 +234,7 @@ ul li, ol li {
     transition: all 0.3s ease-in-out;
 }
 
-ul li:hover, ol li:hover {
+ ol li:hover {
     background-color: #ddd;
     transform: scale(1.05);
 }

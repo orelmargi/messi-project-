@@ -1,0 +1,109 @@
+
+.navbar {
+    font-family: arial, sans-serif;
+    background: #75aadb;;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    padding: 15px;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.navbar span {
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+}
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.navbar .logo img {
+    height: 60px; /* הגדרת גובה הלוגו */
+    transition: transform 0.3s ease; /* מעבר חלק בעת שינוי */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* הגדלת הלוגו כשמעבירים עליו את העכבר */
+} 
+        body {
+            font-family: Arial, sans-serif;
+            direction: ltr;
+            text-align: center;
+            background: linear-gradient(135deg, #75addb, white);
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 450px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            background: #00aaff;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #0088cc;
+        }

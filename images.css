@@ -37,7 +37,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #ffcc00;
+    color: white;
 }
 
 .navbar span {
@@ -53,6 +53,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
+.navbar .logo img {
+    height: 60px; /* הגדרת גובה הלוגו */
+    transition: transform 0.3s ease; /* מעבר חלק בעת שינוי */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* הגדלת הלוגו כשמעבירים עליו את העכבר */
+}
+
+/* עיצוב הלינק ללוגו */
+.navbar .logo a {
+    text-decoration: none; /* הסרת קו תחתון */
+}
+
 h1 {
     text-align: center; /* ממרכז את הטקסט אופקית */
     font-family: arial, sans-serif;
@@ -70,11 +84,10 @@ h1 {
 
 #images .gallery {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 עמודות רספונסיביות */
     gap: 10px;
-    padding: 20px;
-    max-width: 900px;
     margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
 }
 
 /* סגנון לפריטי הגלריה */

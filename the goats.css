@@ -1,0 +1,69 @@
+
+
+body { font-family: Arial, sans-serif; direction: ltr; text-align: center; }
+table { width: 80%; margin: auto; border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 10px; }
+th { background-color: #f2f2f2; }
+h2 { border-bottom: 2px solid black; display: inline-block; padding-bottom: 5px; }
+
+.navbar {
+font-family: arial, sans-serif;
+background: #75aadb;;
+padding: 15px 0;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.navbar li {
+display: inline;
+padding: 15px;
+margin: 0 20px;
+}
+
+.navbar a {
+text-decoration: none;
+color:black;
+font-weight: bold;
+font-size: 18px;
+transition: color 0.3s;
+}
+
+.navbar a:hover {
+color: white;
+}
+
+.navbar span {
+color: white;
+font-size: 18px;
+padding: 0 10px;
+}
+.navbar .logo img {
+    height: 60px; /* הגדרת גובה הלוגו */
+    transition: transform 0.3s ease; /* מעבר חלק בעת שינוי */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* הגדלת הלוגו כשמעבירים עליו את העכבר */
+}
+
+/* עיצוב הלינק ללוגו */
+.navbar .logo a {
+    text-decoration: none; /* הסרת קו תחתון */
+}
+.contact-container {
+max-width: 600px;
+margin: 50px auto;
+background: white;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}

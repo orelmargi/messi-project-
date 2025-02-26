@@ -1,13 +1,3 @@
-.store-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* לכל תא יש רוחב מינימלי של 300px */
-    gap: 20px;
-    padding: 20px;
-    justify-items: stretch;
-    background-color: white;
-    
-}
-
 .navbar {
     font-family: arial, sans-serif;
     background: #75aadb;;
@@ -40,7 +30,8 @@
 }
 
 .navbar a:hover {
-    color: white;
+color: white;
+
 }
 
 .navbar span {
@@ -71,47 +62,15 @@
 }
 
 h1 {
-font-family: arial, sans-serif;
-font-size: 36px;
-text-align: center;
-color: black;
-padding: 20px;
-border-radius: 8px;
-}
-
-
-.product {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: arial;
     text-align: center;
-    max-width: 320px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
-
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product h2 {
-    font-family: arial, sans-serif;
-    margin-bottom: 12px;
-    font-size: 1.4em;
-    color: #333;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.product:hover img {
-    transform: scale(1.05);
+.quote {
+    background-image: url('images/messi.jpg'); 
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f0d565;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
