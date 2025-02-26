@@ -1,16 +1,25 @@
-.store-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* לכל תא יש רוחב מינימלי של 300px */
-    gap: 20px;
-    padding: 20px;
-    justify-items: stretch;
-    background-color: white;
-    
+/* עיצוב כללי של הדף */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    color: black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* navbar */
 .navbar {
-    font-family: arial, sans-serif;
-    background: #75aadb;;
+    font-family: Arial, sans-serif;
+    background: #75aadb;
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,7 +42,7 @@
 
 .navbar a {
     text-decoration: none;
-    color:black;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s;
@@ -43,66 +52,47 @@
     color: white;
 }
 
-.navbar span {
-    color: white;
-    font-size: 18px;
-    padding: 0 10px;
-}
-.contact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
 .navbar .logo img {
-    height: 60px; /* הגדרת גובה הלוגו */
-    transition: transform 0.3s ease; /* מעבר חלק בעת שינוי */
+    height: 60px;
+    transition: transform 0.3s ease;
 }
 
 .navbar .logo img:hover {
-    transform: scale(1.1); /* הגדלת הלוגו כשמעבירים עליו את העכבר */
+    transform: scale(1.1);
 }
 
-/* עיצוב הלינק ללוגו */
-.navbar .logo a {
-    text-decoration: none; /* הסרת קו תחתון */
+/* קונטיינר המוצרים */
+.store-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* התאמה אוטומטית של מספר העמודות */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
 }
 
-h1 {
-font-family: arial, sans-serif;
-font-size: 36px;
-text-align: center;
-color: black;
-padding: 20px;
-border-radius: 8px;
-}
-
-
+/* עיצוב לכל מוצר */
 .product {
-    background: #fff;
+    background-color: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 320px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
+/* אפקט hover למוצר */
 .product:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.product h2 {
-    font-family: arial, sans-serif;
-    margin-bottom: 12px;
-    font-size: 1.4em;
-    color: #333;
-}
-
+/* עיצוב התמונה */
 .product img {
     width: 100%;
     height: auto;
@@ -112,6 +102,64 @@ border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.product:hover img {
+/* אפקט hover על התמונה */
+.product img:hover {
     transform: scale(1.05);
+}
+
+/* עיצוב המחירים */
+.product p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product .sale-price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product .price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* עיצוב כפתור הקנייה */
+.product button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background: #219150;
+}
+
+/* רספונסיביות עבור מסכים קטנים */
+@media (max-width: 600px) {
+    header {
+        font-size: 2rem;
+        padding: 30px 20px;
+    }
+
+    .store-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* התאמה למסכים קטנים */
+        gap: 15px;
+    }
+
+    .product {
+        padding: 15px;
+    }
+
+    .product h2 {
+        font-size: 1.4rem;
+    }
 }
