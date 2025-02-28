@@ -255,3 +255,38 @@ footer a{
     background-color: rgba(0,0,0,0.5);
     padding: 10px;
 }
+
+
+.product:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* אנימציה לוגו */
+.navbar .logo img {
+    animation: logoBounce 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes logoBounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/* הוספת האנימציה לכותרות */
+h1, h2 {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
