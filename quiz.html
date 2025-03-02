@@ -1,24 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="en">
-    <nav class="navbar">
-        <ul>
-          <li><a href="./career.html">career</a></li>
-          <li><a href="./gallery.html">gallery</a></li>
-          <li><a href="./store.html">store</a></li>
-          <li><a href="./quiz.html">quiz</a></li>
-          <li><a href="./about.html">about us</a></li>
-          <li><a href="./quotes.html">quotes</a></li>
-          <li><a href="./the goats.html">the goats</a></li>
-          <li><a href="./contactus.html">contact us</a></li>
-          <li>
-            <a href="./index.html" class="logo">
-              <img src="./assets/images/Messi logo.svg" alt="website logo">
-            </a>
-          </li>
-        </ul>
-      </nav>
-      
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +7,10 @@
     <link rel="stylesheet" href="./quiz.css">
 </head>
 <body>
-
     <h1> ⚽ How Well Do You Know Leo Messi ⚽</h1>
     <h2> Fill Out the Questionnaire, Get 10% Discount! </h2>
 
-    <form>
+    <form name="quizForm" action="discount.html" method="GET">
         <fieldset>
             <legend>1. In which year did Messi win his first Ballon d'Or?</legend>
             <label><input type="radio" name="q1" value="2007"> 2007</label><br>
@@ -51,23 +31,22 @@
             <label><input type="radio" name="q3" value="1"> 1</label><br>
             <label><input type="radio" name="q3" value="2"> 2</label>
         </fieldset>
+
         <fieldset>
-            <legend>4. which club did messi play for the most in his career</legend>
+            <legend>4. Which club did Messi play for the most in his career?</legend>
             <label><input type="radio" name="q4" value="Barcelona"> Barcelona</label><br>
             <label><input type="radio" name="q4" value="PSG"> PSG</label><br>
             <label><input type="radio" name="q4" value="Inter Miami"> Inter Miami</label>
         </fieldset>
-        <fieldset>
 
-            <legend>5. How many times has Messi won the Ballon d'Or</legend>
+        <fieldset>
+            <legend>5. How many times has Messi won the Ballon d'Or?</legend>
             <label><input type="radio" name="q5" value="5"> 5</label><br>
             <label><input type="radio" name="q5" value="8"> 8</label><br>
             <label><input type="radio" name="q5" value="6"> 6</label><br>
-
         </fieldset>
 
         <input type="submit" value="Submit">
     </form>
-
 </body>
 </html>
